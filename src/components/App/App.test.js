@@ -12,7 +12,6 @@ describe("Adding new comments", () => {
   let authorInput;
   let commentInput;
   let submitButton;
-
   const comments = [
     {
       author: "Abe",

@@ -2,6 +2,7 @@ import React from "react"
 import {useState} from "react"
 import BlogPost from "../BlogPost";
 import Comment from "../Comment";
+import CommentForm from "../CommentForm";
 import CommentList from "../CommentList";
 
 
@@ -19,30 +20,25 @@ function App() {
 
   const comments = [
     {author: "Harry Smith",
-comment: "Great blog babe!"},
-{author: "Hope Sutherland", comment:"Hello!"}
+comment: "Great blog, slut!",
+initials: "HS"},
+{author: "Hope Sutherland", comment:"Hello!", initials: "HS"}
 ]
 
-/*  var getInitials = function (comments, index) {
-    const names = comments[index].author.split(' ')
-       let initials = names[index].substring(0, 1).toUpperCase();
-        initials = initials + names[names.length -1].substring(0, 1).toUpperCase();
-        return <h2>{initials}</h2>;
-      } */ 
+/* var getInitials = function (comments) {
+  const names = comments[index].author.split(' ')
+     const initials = names[index].substring(0, 1).toUpperCase();
+      initials = initials + names[names.length -1].substring(0, 1).toUpperCase();
+      return <h2>{initials}</h2>;
+    } */ 
+
+    /*function getInitials(comments)  
+    {comments.map(x, index => {const names = comment.author.split(' ')
+     let initials = names[index].substring(0, 1).toUpperCase();
+      initials = initials + names[names.length -1].substring(0, 1).toUpperCase();
+      return <h2>{initials}</h2>;})} */
+
   return <> 
-
-  {function getComment(comments) {
-        for (let i = 0; i <= comments.length; i++) {
-        const wholeComment = comments[i]
-        const id = comments[i]
-        const author = wholeComment.author
-        const comment = wholeComment.comment
-        const names = author.split(' ')
-        const initials = names[0].substring(0, 1).toUpperCase();
-        initials = initials + names[names.length -1].substring(0, 1).toUpperCase();
-const newComment = <li><Comment id={id}><h3>{author}</h3><h2>{initials}</h2><p>{comment}</p></Comment></li>
-return newComment}}}
-
   <BlogPost
     title={blog.title}
     date={blog.datePosted}
@@ -51,10 +47,12 @@ return newComment}}}
     imgSrc={require("./Screenshot 2023-04-15 at 12.38.43.png")}
     content={blog.content}>
   </BlogPost>
-  <CommentList>
-  <Comment function={getComment()} content ={getComment()}></Comment>
+  <CommentList text={comments}>
   </CommentList>
+  <CommentForm></CommentForm>
+
   </>
+
   }
 
 export default App;
