@@ -25,6 +25,15 @@ initials: "HS"},
 {author: "Hope Sutherland", comment:"Hello!", initials: "HS"}
 ]
 
+/* Todo 
+- set comment state to be array of comments 
+- have input fields recognise values
+- hook up button
+- upon click, add inputs as object to state array
+- also run initials function and add those as initials 
+- also clear input 
+*/
+
 /* var getInitials = function (comments) {
   const names = comments[index].author.split(' ')
      const initials = names[index].substring(0, 1).toUpperCase();
@@ -47,12 +56,11 @@ initials: "HS"},
     imgSrc={require("./Screenshot 2023-04-15 at 12.38.43.png")}
     content={blog.content}>
   </BlogPost>
+  <h3>Comments:</h3>
   <CommentList text={comments}>
   </CommentList>
   <CommentForm></CommentForm>
-
-  </>
-
+</>
   }
 
 export default App;
