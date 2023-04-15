@@ -1,5 +1,4 @@
-function CommentList() {
-  return null;
-}
+import React from "react"
 
-export default CommentList;
+export default function CommentList(props){
+return <ol></ol>}
