@@ -1,3 +1,15 @@
-.blog {display: flex;
-    flex-direction: column;
-align-items: center;}
+.post {max-width: 700px;
+padding-top: 20px;
+font-size: 14pt;}
+
+.blog {justify-content: center;
+text-align: left;}
+
+#posttitle {text-align: center;
+font-size: 25pt;}
+
+#image {justify-content: center;
+text-align: center;
+border-style: solid;
+margin-left: 60px;
+border-color: hotpink;}
